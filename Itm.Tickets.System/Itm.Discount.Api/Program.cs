@@ -3,6 +3,8 @@ using Itm.Discount.Api.Dtos;
 
 // Configuración inicial de la minimal API
 var builder = WebApplication.CreateBuilder(args);
+
+// Registro de servicios (Inyección de dependencias)
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -18,7 +20,7 @@ if (app.Environment.IsDevelopment())
 
 var discounts = new List<DiscountDto>
 {
-    new DiscountDto("ITM50",0.5m)
+    new("ITM50",0.5m)
 };
 
 // Endpoint GET /api/discounts/{code}

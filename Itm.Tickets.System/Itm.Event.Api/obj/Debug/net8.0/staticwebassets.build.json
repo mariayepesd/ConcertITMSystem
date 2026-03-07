@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "ftsAxDaGrLZHl4OJwFLIoO3cXggxrfz1sXnrQ7uYBek=",
+  "Source": "Itm.Event.Api",
+  "BasePath": "_content/Itm.Event.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

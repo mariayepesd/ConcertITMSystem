@@ -18,7 +18,7 @@ if (app.Environment.IsDevelopment())
 
 var events = new List<EventDto>
 {
-    new EventDto(1,"Concierto ITM",50000,100)
+    new(1,"Concierto ITM",50000,100)
 };
 
 // Endpoints GET /api/events/{id}, POST /api/events/reserve y POST /api/events/release
