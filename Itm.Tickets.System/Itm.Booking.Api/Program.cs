@@ -16,7 +16,7 @@ builder.Services.AddHttpClient("EventClient", client =>
     //Resiliencia (Si no responde en 5 segundos, se aborta la acción)
     client.Timeout = TimeSpan.FromSeconds(5);
 
-});
+}).AddStandardResilienceHandler();
 
 // Cliente de descuentos
 builder.Services.AddHttpClient("DiscountClient", client =>
@@ -26,7 +26,7 @@ builder.Services.AddHttpClient("DiscountClient", client =>
     //Resiliencia (Si no responde en 5 segundos, se aborta la acción)
     client.Timeout = TimeSpan.FromSeconds(5);
 
-});
+}).AddStandardResilienceHandler();
 
 var app = builder.Build();
 
