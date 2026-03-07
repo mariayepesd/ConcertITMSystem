@@ -1,4 +1,3 @@
-
 // Configuración inicial de la minimal API
 var builder = WebApplication.CreateBuilder(args);
 

@@ -49,6 +49,28 @@
           }
         }
       }
+    },
+    "/api/events/release": {
+      "post": {
+        "tags": [
+          "Itm.Event.Api"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReduceDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {

@@ -35,6 +35,7 @@ app.MapGet("/api/events/{id}", (int id) =>
 
     return Results.Ok(ev);
 });
+
 // POST /api/events/reserve
 app.MapPost("/api/events/reserve", (ReduceDto request) =>
 {
@@ -59,7 +60,30 @@ app.MapPost("/api/events/reserve", (ReduceDto request) =>
 
     events[index]  = ev with { AvailableSeats = ev.AvailableSeats -  request.Quantity };
 
-    return Results.Ok($"Sillas apartadas exitosamente para el evento {ev.EventName}. Cantidad de sillas solicitadas {request.Quantity}.");
+    return Results.Ok($"Sillas apartadas exitosamente para el evento '{ev.EventName}'. Cantidad de sillas solicitadas {request.Quantity}.");
+
+});
+
+// POST /api/events/release
+app.MapPost("/api/events/release", (ReduceDto request) =>
+{
+    // 1. Buscamos el evento
+
+    var ev = events.FirstOrDefault(e => e.EventId == request.EventId);
+
+    // 2. Validación existencia 
+
+    if (ev == null)
+    {
+        return Results.NotFound("Evento no encontrado."); // Error 404
+    }
+
+    var index = events.IndexOf(ev);
+
+    events[index] = ev with { AvailableSeats = ev.AvailableSeats + request.Quantity };
+
+
+    return Results.Ok($"[COMPENSACIÓN] Para el evento '{ev.EventName}', se devolvieron {request.Quantity} sillas por error en el proceso.");
 
 });
 
