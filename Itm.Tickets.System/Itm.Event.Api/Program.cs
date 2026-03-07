@@ -1,23 +1,38 @@
+using Itm.Event.Api.Dtos;
+
+
+// Configuración inicial de la minimal API
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
+var app  = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.UseAuthorization();
+// Datos simulados
 
-app.MapControllers();
+var events = new List<EventDto>
+{
+    new EventDto(1,"Concierto ITM",50000,100)
+};
+
+// Endpoints GET /api/events/{id}, POST /api/events/reserve y POST /api/events/release
+
+app.MapGet("/api/events/{id}", (int id) =>
+{
+    var ev = events.FirstOrDefault(e => e.EventId == id);
+
+    if (ev == null)
+    {
+        return Results.NotFound("Evento no encontrado");
+    }
+
+    return Results.Ok(ev);
+});
 
 app.Run();
