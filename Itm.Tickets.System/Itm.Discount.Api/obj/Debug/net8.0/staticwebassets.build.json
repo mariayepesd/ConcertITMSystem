@@ -1,12 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "e34G1JXGnDJ/FkJ5S7XHn+8mO3vk06SWO7uFCH6lZCw=",
-  "Source": "Itm.Discount.Api",
-  "BasePath": "_content/Itm.Discount.Api",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
-}
+{"Version":1,"Hash":"DPCqQvB+9ASfTfV6velwYb5sv9tRZgRlyPmd5yBa+c4=","Source":"Itm.Discount.Api","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

@@ -1,12 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "ftsAxDaGrLZHl4OJwFLIoO3cXggxrfz1sXnrQ7uYBek=",
-  "Source": "Itm.Event.Api",
-  "BasePath": "_content/Itm.Event.Api",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
-}
+{"Version":1,"Hash":"8cLT8g7pTCCmphB3kYy/Jhz1Y0WXpZaeL2zMt5uoxsk=","Source":"Itm.Event.Api","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

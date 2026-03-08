@@ -1,12 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "n4Dqsg0DOaLHfMymwG7MvIa7C/3rS5Toqt3kWqTHZF8=",
-  "Source": "Itm.Booking.Api",
-  "BasePath": "_content/Itm.Booking.Api",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
-}
+{"Version":1,"Hash":"W4Yo3QQ4yphbHge4LxwwnGy0xpQ1M2dauIeAQ/X66v4=","Source":"Itm.Booking.Api","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
